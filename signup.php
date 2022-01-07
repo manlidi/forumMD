@@ -1,5 +1,5 @@
 <?php
-require('actions/signupAction.php');
+require('actions/users/signupAction.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,9 +7,10 @@ require('actions/signupAction.php');
     include 'include/head.php';
 ?>
 <body>
-<h1>Formulaire d'Inscription</h1>
-<div class="separation"><hr></div>
-
+<?php
+    include 'include/navbar.php';
+?>
+<br><br>
     <form method="POST" action="" class="container">
 
     <?php

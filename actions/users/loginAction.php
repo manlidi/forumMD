@@ -1,8 +1,9 @@
 <?php
-require('actions/database.php');
+session_start();
+require_once('actions/database.php');
 
 //Vérifier si le formulaire est soumis
-if (isset($_POST['connect'])) {
+if (isset($_POST['validate'])) {
 
     //Vérifier si l'utilisateur a entrer toutes les données
     if (!empty($_POST['email']) && !empty($_POST['mdp'])) {
@@ -42,6 +43,6 @@ if (isset($_POST['connect'])) {
     }else{
         $error = "Veuillez compléter tous les champs!!!";
     }
-}
+}   
 
 ?>

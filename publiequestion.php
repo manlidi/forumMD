@@ -1,6 +1,6 @@
 <?php
-require('actions/publiequestionAction.php');
-require('actions/securiteAction.php');
+require('actions/questions/publiequestionAction.php');
+require('actions/users/securiteAction.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">

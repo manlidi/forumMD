@@ -1,4 +1,5 @@
 <?php
+session_start();
 require('actions/database.php');
 
 //Vérifier si le formulaire est soumis

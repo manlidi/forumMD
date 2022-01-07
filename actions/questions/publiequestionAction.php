@@ -1,4 +1,5 @@
 <?php
+session_start();
 require('actions/database.php');
 
 //Vérifier si le formulaire est soumis
@@ -15,6 +16,7 @@ if (isset($_POST['validate'])) {
         $idmembres = $_SESSION['id'];
         $emailmembres = $_SESSION['email'];
 
+        //faire l'insertion
         $insertquestion = $connexion->prepare('INSERT INTO `questions`(`titre`, `descriptions`, `contenu`, `id_membre`, `email_membre`, `datpublication`) VALUES(?, ?, ?, ?, ?, ?)');
         $insertquestion->execute(array($titre, $descriptions, $contenu, $idmembres, $emailmembres, $date));
     

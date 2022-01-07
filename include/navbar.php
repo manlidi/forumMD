@@ -12,6 +12,21 @@
       <li class="nav-item">
         <a class="nav-link" href="publiequestion.php">Publier une question</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="questions.php">Questions</a>
+      </li>
+      <?php
+        if(isset($_SESSION['auth'])){
+          ?>
+            <li class="nav-item">
+              <a class="nav-link" href="profil.php?id=<?= $_SESSION['id']; ?>">Profil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="actions/users/deconnexionAction.php">Deconnexion</a>
+            </li>
+          <?php
+        }
+      ?>
     </ul>
   </div>
 </nav>
